@@ -1,0 +1,11 @@
+Value HOSTNAME (\S+)
+Value TOTAL_MEM (\d+)
+Value USED_MEM (\d+)
+Value FREE_MEM (\d+)
+Value KERNEL (\d+)
+
+
+Start
+  ^${HOSTNAME}[>#].*
+  ^System\s+memory  :\s+${TOTAL_MEM}K total,\s+${USED_MEM}K used,\s+${FREE_MEM}K free,\s+${KERNEL}K kernel reserved
+  ^Processor\s+Pool\s+Total:\s+${TOTAL_MEM}\s+Used:\s+${USED_MEM}\s+Free:\s+${FREE_MEM}
